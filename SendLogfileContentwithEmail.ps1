@@ -19,7 +19,7 @@ function sendMail ($mailbody){
      $smtp.Send($msg)
 }
 $path = "D:\LogFiles"
-Get-ChildItem $path -Filter *.txt |
+Get-ChildItem $path -Filter *.log |
 Foreach-Object {
     $fileContent = (Get-Content $_.FullName | Out-String)    
     sendMail $fileContent
