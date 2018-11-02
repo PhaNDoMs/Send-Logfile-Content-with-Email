@@ -18,7 +18,7 @@ function sendMail ($mailbody){
      #Sending email
      $smtp.Send($msg)
 }
-$path = "C:\Files"
+$path = "D:\LogFiles"
 Get-ChildItem $path -Filter *.txt |
 Foreach-Object {
     $fileContent = (Get-Content $_.FullName | Out-String)    
